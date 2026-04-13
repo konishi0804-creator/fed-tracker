@@ -19,8 +19,8 @@ export default function StanceMatrix() {
           const xPos = 50 + (member.stanceScore * 40);
           
           // Voter status maps to Y axis (simplified distribution)
-          // Voters slightly higher, non-voters lower
-          const yPos = member.votingStatus === 'Voter' ? 30 + Math.random() * 20 : 70 + Math.random() * 10;
+          // Expand the Y-axis spread to prevent icon overlaps
+          const yPos = member.votingStatus === 'Voter' ? 10 + Math.random() * 30 : 60 + Math.random() * 30;
           
           return (
             <div 

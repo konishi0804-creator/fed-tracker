@@ -1,0 +1,105 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  color: var(--foreground);
+  overflow: hidden;
+}
+
+.headerArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.tableTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.updatedText {
+  font-size: 0.75rem;
+  color: var(--neutral);
+  opacity: 0.8;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  overflow-y: auto;
+  flex-grow: 1;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.table th {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--neutral);
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.table td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.2s;
+}
+
+.table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.dateCell {
+  font-weight: 600;
+  color: var(--foreground);
+  background: rgba(255, 255, 255, 0.02);
+  position: sticky;
+  left: 0;
+  z-index: 5;
+}
+
+.dataCell {
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.zeroCell {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.highlightCell {
+  background-color: rgba(59, 130, 246, 0.2); /* Light blue highlight */
+  color: #93c5fd;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--neutral);
+  font-size: 0.9rem;
+}

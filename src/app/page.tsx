@@ -3,6 +3,7 @@ import MembersDirectory from "../components/MembersDirectory";
 import CalendarWeek from "../components/CalendarWeek";
 import StanceMatrix from "../components/StanceMatrix";
 import StatementsTimeline from "../components/StatementsTimeline";
+import FedWatchTable from "../components/FedWatchTable";
 
 // SVG Icons
 const UsersIcon = () => (
@@ -32,6 +33,12 @@ export default function Home() {
       </header>
 
       <div className={styles.grid}>
+        {/* CME FedWatch Tool */}
+        <section className={`${styles.card} animate-fade-in`} style={{ gridColumn: '1 / -1', minHeight: '300px' }}>
+          <div className="glass-panel" style={{ height: '100%', padding: '0', overflow: 'hidden' }}>
+            <FedWatchTable />
+          </div>
+        </section>
 
         {/* Top Row: Matrix (Left 8) + Schedule (Right 4) */}
         <section className={`${styles.card} ${styles.matrixArea} animate-fade-in`} style={{ animationDelay: '0.1s' }}>
