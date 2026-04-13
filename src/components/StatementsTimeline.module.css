@@ -1,0 +1,77 @@
+.loading, .empty {
+  color: var(--neutral);
+  text-align: center;
+  padding: 2rem;
+  font-style: italic;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 20px;
+  gap: 1.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 0;
+  left: 5px;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.timelineItem {
+  position: relative;
+}
+
+.timelineDot {
+  position: absolute;
+  left: -20px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--background);
+  border: 2px solid var(--primary);
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+.timelineContent {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 1rem;
+  border-radius: 12px;
+  transition: background 0.2s;
+}
+
+.timelineContent:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.date {
+  font-size: 0.8rem;
+  color: var(--neutral);
+  margin-bottom: 0.25rem;
+}
+
+.title {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+.title:hover {
+  color: var(--primary-hover);
+}
+
+.summary {
+  font-size: 0.9rem;
+  color: var(--neutral);
+  margin: 0;
+  line-height: 1.4;
+}
