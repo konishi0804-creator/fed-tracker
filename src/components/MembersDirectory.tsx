@@ -39,7 +39,7 @@ export default function MembersDirectory() {
                 <div className={styles.avatar}>
                    <span className={styles.avatarInitial}>{member.name.charAt(0)}</span>
                    <img 
-                     src={`/photos/${member.name}.png`} 
+                     src={member.imageUrl || `/images/members/${member.id}.jpg`} 
                      alt={member.name} 
                      className={styles.avatarImage} 
                      onError={(e) => { e.currentTarget.style.display = 'none'; }}
